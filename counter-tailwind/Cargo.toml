@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "myapp_lib",
+    "myapp_cli",
+    "myapp_wasm",
+]
