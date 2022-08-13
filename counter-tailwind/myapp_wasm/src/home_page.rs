@@ -19,7 +19,7 @@ impl HomePage {
     }
 
     #[wasm_bindgen(js_name = init)]
-    pub fn initial_model(&self) -> Result<JsValue, JsValue> {
+    pub fn init(&self) -> Result<JsValue, JsValue> {
         wasm::init(&self.0)
     }
 
