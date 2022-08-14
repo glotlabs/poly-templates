@@ -1,4 +1,4 @@
-use myapp_lib::home_page;
+use myapp_core::home_page;
 use polyester::page::Page;
 use std::env;
 

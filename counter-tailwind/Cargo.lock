@@ -54,13 +54,13 @@ dependencies = [
 name = "myapp_cli"
 version = "0.1.0"
 dependencies = [
- "myapp_lib",
+ "myapp_core",
  "polyester",
  "serde_json",
 ]
 
 [[package]]
-name = "myapp_lib"
+name = "myapp_core"
 version = "0.1.0"
 dependencies = [
  "maud",
@@ -73,7 +73,7 @@ dependencies = [
 name = "myapp_wasm"
 version = "0.1.0"
 dependencies = [
- "myapp_lib",
+ "myapp_core",
  "polyester",
  "polyester_macro",
  "serde",

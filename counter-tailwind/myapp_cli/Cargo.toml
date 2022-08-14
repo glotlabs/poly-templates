@@ -6,6 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-myapp_lib = { path = "../myapp_lib" }
+myapp_core = { path = "../myapp_core" }
 polyester = { path = "../../../polyester-rs/polyester" }
 serde_json = "1.0.81"
