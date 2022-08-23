@@ -15,12 +15,12 @@ pub struct Model {
 
 pub struct HomePage {}
 
-impl Page<Model, Msg, CustomEffect> for HomePage {
+impl Page<Model, Msg, PageEffect> for HomePage {
     fn id(&self) -> DomId {
         DomId::new("myapp")
     }
 
-    fn init(&self) -> (Model, Effects<Msg, CustomEffect>) {
+    fn init(&self) -> (Model, Effects<Msg, PageEffect>) {
         let model = Model { count: 0 };
 
         let effects = vec![];
@@ -28,14 +28,14 @@ impl Page<Model, Msg, CustomEffect> for HomePage {
         (model, effects)
     }
 
-    fn subscriptions(&self, _model: &Model) -> browser::Subscriptions<Msg, CustomEffect> {
+    fn subscriptions(&self, _model: &Model) -> browser::Subscriptions<Msg, PageEffect> {
         vec![
             browser::on_click(&Id::Increment, Msg::Increment),
             browser::on_click(&Id::Decrement, Msg::Decrement),
         ]
     }
 
-    fn update(&self, msg: &Msg, model: &mut Model) -> Result<Effects<Msg, CustomEffect>, String> {
+    fn update(&self, msg: &Msg, model: &mut Model) -> Result<Effects<Msg, PageEffect>, String> {
         match msg {
             Msg::Increment => {
                 model.count += 1;
@@ -73,7 +73,7 @@ pub enum Msg {
 
 #[derive(Clone, serde::Serialize, serde::Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub enum CustomEffect {}
+pub enum PageEffect {}
 
 fn view_head() -> maud::Markup {
     html! {
