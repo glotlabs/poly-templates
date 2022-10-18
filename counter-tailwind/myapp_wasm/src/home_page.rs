@@ -9,7 +9,7 @@ pub struct HomePage(home_page::HomePage);
 
 impl_wasm_page!(HomePage);
 
-#[wasm_bindgen(js_name = homePage)]
+#[wasm_bindgen(js_name = "homePage")]
 pub fn new() -> Result<HomePage, JsValue> {
     Ok(HomePage(home_page::HomePage {}))
 }
