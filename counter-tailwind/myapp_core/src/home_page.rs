@@ -7,6 +7,7 @@ use polyester::page;
 use polyester::page::Page;
 use polyester::page::PageMarkup;
 use serde::{Deserialize, Serialize};
+use url::Url;
 
 #[derive(Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -14,7 +15,9 @@ pub struct Model {
     pub count: isize,
 }
 
-pub struct HomePage {}
+pub struct HomePage {
+    pub current_url: Url,
+}
 
 impl Page<Model, Msg, AppEffect, Markup> for HomePage {
     fn id(&self) -> &'static dyn DomId {

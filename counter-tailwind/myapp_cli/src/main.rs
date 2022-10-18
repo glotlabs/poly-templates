@@ -1,6 +1,7 @@
 use myapp_core::home_page;
 use polyester::page::Page;
 use std::env;
+use url::Url;
 
 fn main() {
     let args_: Vec<String> = env::args().collect();
@@ -8,7 +9,9 @@ fn main() {
 
     match args[1..] {
         ["home_page"] => {
-            let page = home_page::HomePage {};
+            let page = home_page::HomePage {
+                current_url: Url::parse("http://localhost/").unwrap(),
+            };
             print_html(page);
         }
 
