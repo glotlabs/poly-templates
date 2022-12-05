@@ -80,7 +80,7 @@ name = "myapp_cli"
 version = "0.1.0"
 dependencies = [
  "myapp_core",
- "polyester",
+ "poly",
  "serde_json",
  "url",
 ]
@@ -90,8 +90,8 @@ name = "myapp_core"
 version = "0.1.0"
 dependencies = [
  "maud",
- "polyester",
- "polyester_macro",
+ "poly",
+ "poly_macro",
  "serde",
  "serde_json",
  "strum",
@@ -104,8 +104,8 @@ name = "myapp_wasm"
 version = "0.1.0"
 dependencies = [
  "myapp_core",
- "polyester",
- "polyester_macro",
+ "poly",
+ "poly_macro",
  "serde",
  "wasm-bindgen",
 ]
@@ -123,9 +123,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "478c572c3d73181ff3c2539045f6eb99e5491218eae919370993b890cdbdd98e"
 
 [[package]]
-name = "polyester"
+name = "poly"
 version = "0.1.0"
-source = "git+https://github.com/polyester-web/polyester-rs#7a3bce30f284ccaebbb6431cbb3b38cc1830225f"
+source = "git+https://github.com/glotlabs/poly-rs#79231bc8eac36314fd82dd8438f0a32f3b3b0766"
 dependencies = [
  "maud",
  "serde",
@@ -134,9 +134,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "polyester_macro"
+name = "poly_macro"
 version = "0.1.0"
-source = "git+https://github.com/polyester-web/polyester-rs#7a3bce30f284ccaebbb6431cbb3b38cc1830225f"
+source = "git+https://github.com/glotlabs/poly-rs#79231bc8eac36314fd82dd8438f0a32f3b3b0766"
 dependencies = [
  "quote",
  "syn",

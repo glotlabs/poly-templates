@@ -1,5 +1,5 @@
 use myapp_core::home_page;
-use polyester::page::Page;
+use poly::page::Page;
 use std::env;
 use url::Url;
 

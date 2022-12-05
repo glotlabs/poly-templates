@@ -1,11 +1,11 @@
 use maud::html;
 use maud::Markup;
-use polyester::browser;
-use polyester::browser::DomId;
-use polyester::browser::Effects;
-use polyester::page;
-use polyester::page::Page;
-use polyester::page::PageMarkup;
+use poly::browser;
+use poly::browser::DomId;
+use poly::browser::Effects;
+use poly::page;
+use poly::page::Page;
+use poly::page::PageMarkup;
 use serde::{Deserialize, Serialize};
 use url::Url;
 
@@ -69,7 +69,7 @@ impl Page<Model, Msg, AppEffect, Markup> for HomePage {
     }
 }
 
-#[derive(strum_macros::Display, polyester_macro::DomId)]
+#[derive(strum_macros::Display, poly_macro::DomId)]
 #[strum(serialize_all = "kebab-case")]
 enum Id {
     MyApp,

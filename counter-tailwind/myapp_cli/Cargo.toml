@@ -7,6 +7,6 @@ edition = "2021"
 
 [dependencies]
 myapp_core = { path = "../myapp_core" }
-polyester = { git = "https://github.com/polyester-web/polyester-rs" }
+poly = { git = "https://github.com/glotlabs/poly-rs" }
 serde_json = "1.0.81"
 url = { version = "2.3.1", features = ["serde"] }

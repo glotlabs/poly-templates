@@ -1,14 +1,14 @@
 import init from "../wasm/myapp.js";
 import { homePage } from "../wasm/myapp";
-import { Polyester } from "polyester";
-import { defaultDebugConfig } from "polyester/src/logger";
+import { Poly } from "poly";
+import { defaultDebugConfig } from "poly/src/logger";
 
 (async () => {
   await init("/wasm/myapp_bg.wasm");
 
-  const polyester = new Polyester(homePage(location.href), {
+  const poly = new Poly(homePage(location.href), {
     loggerConfig: defaultDebugConfig(),
   });
 
-  polyester.init();
+  poly.init();
 })();

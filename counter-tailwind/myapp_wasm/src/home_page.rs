@@ -1,7 +1,7 @@
 use myapp_core::home_page;
-use polyester::page::wasm;
-use polyester::page::Page;
-use polyester_macro::impl_wasm_page;
+use poly::page::wasm;
+use poly::page::Page;
+use poly_macro::impl_wasm_page;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
