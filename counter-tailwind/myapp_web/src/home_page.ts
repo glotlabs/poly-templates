@@ -1,5 +1,4 @@
-import init from "../wasm/myapp.js";
-import { homePage } from "../wasm/myapp";
+import init, { homePage } from "../wasm/myapp";
 import { Poly } from "poly";
 import { defaultDebugConfig } from "poly/src/logger";
 
