@@ -11,8 +11,7 @@ impl_wasm_page!(HomePage);
 
 #[wasm_bindgen(js_name = "homePage")]
 pub fn new(js_current_url: JsValue) -> Result<HomePage, JsValue> {
-    let current_url = js_current_url
-        .into_serde()
+    let current_url = wasm::decode_js_value(js_current_url)
         .map_err(|err| format!("Failed to decode URL: {}", err))?;
 
     Ok(HomePage(home_page::HomePage { current_url }))

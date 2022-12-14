@@ -22,7 +22,7 @@ fn main() {
 }
 
 fn print_html<Model, Msg, AppEffect, Markup>(page: impl Page<Model, Msg, AppEffect, Markup>) {
-    let (model, _effects) = page.init();
+    let (model, _effects) = page.init().expect("Failed to init page");
     let markup = page.view(&model);
     println!("{}", page.render_page(markup));
 }

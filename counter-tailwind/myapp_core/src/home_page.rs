@@ -24,12 +24,12 @@ impl Page<Model, Msg, AppEffect, Markup> for HomePage {
         &Id::MyApp
     }
 
-    fn init(&self) -> (Model, Effects<Msg, AppEffect>) {
+    fn init(&self) -> Result<(Model, Effects<Msg, AppEffect>), String> {
         let model = Model { count: 0 };
 
         let effects = vec![];
 
-        (model, effects)
+        Ok((model, effects))
     }
 
     fn subscriptions(&self, _model: &Model) -> browser::Subscriptions<Msg, AppEffect> {
